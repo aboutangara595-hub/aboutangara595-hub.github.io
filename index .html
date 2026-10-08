@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Créateur de sites web professionnels | Bakky</title>
+<meta name="description" content="Création de sites web modernes, rapides et professionnels pour entreprises, entrepreneurs et marques francophones.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050507;--bg2:#101015;--ink:#f3f1ea;--mut:#9a9aa6;--ac:#7c5cff;--ac2:#b9a6ff;--ln:#24242d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050507}}
+:root[data-theme="dark"]{--bg:#050507}
+:root[data-theme="light"]{--bg:#f3f1ea;--bg2:#fff;--ink:#0b0b0f;--mut:#55555f;--ln:#d9d6cc;--ac2:#5b3fd9}
+[hidden]{display:none!important}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Syne,"Space Grotesk",sans-serif;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(2rem,5vw,3.8rem);font-weight:800;max-width:16ch}
+h3{font-size:1.3rem;font-weight:700}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ac2);outline-offset:3px}
+section{padding:clamp(70px,11vw,140px) clamp(20px,5vw,64px);max-width:1280px;margin:auto}
+.lead{color:var(--mut);max-width:58ch;margin-top:18px}
+.ac{color:var(--ac2)}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 28px;border-radius:99px;font-weight:700;font-size:.9rem;letter-spacing:.04em;border:1px solid var(--ink);cursor:pointer;background:none;color:var(--ink);font-family:inherit;transition:.3s}
+.btn.p{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px #7c5cff55}
+.btn.s:hover{background:var(--ink);color:var(--bg)}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px clamp(20px,5vw,64px);backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent)}
+.logo{font:800 1.2rem Syne}
+.logo i{color:var(--ac);font-style:normal}
+.links{display:flex;gap:26px;font-size:.9rem;color:var(--mut)}
+.links a:hover{color:var(--ink)}
+.burger{display:none;background:none;border:1px solid var(--ln);color:var(--ink);width:46px;height:46px;border-radius:12px;font-size:1.3rem}
+@media(max-width:820px){.burger{display:block}.links{position:fixed;inset:70px 0 auto 0;flex-direction:column;background:var(--bg2);padding:24px;gap:18px;font-size:1.1rem;transform:translateY(-130%);transition:.4s}.links.open{transform:none}}
+/* hero */
+.hero{min-height:100svh;display:grid;align-items:center;padding-top:110px;position:relative;max-width:none;overflow:hidden}
+.hero .in{max-width:1280px;margin:auto;width:100%;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.6rem,8.4vw,7rem);font-weight:800;max-width:11ch}
+.hero p{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--mut);max-width:34ch;margin:26px 0 34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.glow{position:absolute;width:60vw;height:60vw;max-width:800px;max-height:800px;right:-10%;top:5%;background:radial-gradient(circle,#7c5cff55,transparent 65%);filter:blur(40px)}
+.float{position:absolute;right:max(2vw,0px);top:18%;width:min(50vw,640px);height:60vh;z-index:1;pointer-events:none}
+.float .w{position:absolute;transition:transform .2s ease-out;will-change:transform}
+@media(max-width:820px){.float{opacity:.35;width:90vw;top:auto;bottom:0;height:40vh}}
+/* mockups */
+.win{background:#16161d;border:1px solid #2c2c38;border-radius:12px;overflow:hidden;box-shadow:0 30px 60px #0009;aspect-ratio:16/10;display:flex;flex-direction:column}
+.win>b{display:block;height:20px;background:#0d0d12;flex:none;background-image:radial-gradient(circle,#444 3px,transparent 4px);background-size:14px 20px;background-repeat:repeat-x;background-position:6px 0;width:100%}
+.scr{flex:1;padding:12px;display:grid;gap:8px;align-content:start;position:relative}
+.scr i{display:block;border-radius:6px;background:var(--c1)}
+.scr .h{height:36%;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.scr .r{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.scr .r i{height:22px;background:var(--c3);opacity:.8}
+.scr .t{height:7px;width:60%;background:var(--c3);opacity:.6}
+.ph{width:54px;aspect-ratio:9/18;border-radius:12px;border:3px solid #2c2c38;background:linear-gradient(160deg,var(--c1),var(--c2));position:absolute;right:14px;bottom:-26px;box-shadow:0 14px 30px #0009;overflow:hidden}
+.ph::after{content:"";position:absolute;inset:55% 18% 14%;background:var(--c3);border-radius:4px;opacity:.7}
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding-top:0;padding-bottom:0}
+.trust div{padding:34px 26px;border:1px solid var(--ln);border-right:0}
+.trust div:last-child{border-right:1px solid var(--ln)}
+.trust svg{width:30px;height:30px;stroke:var(--ac2);fill:none;stroke-width:1.6;margin-bottom:12px}
+.trust p{color:var(--mut);font-size:.9rem}
+@media(max-width:820px){.trust{grid-template-columns:1fr 1fr}.trust div{border:1px solid var(--ln)}}
+/* services */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:48px}
+.card{background:var(--bg2);border:1px solid var(--ln);border-radius:22px;padding:32px;min-height:230px;position:relative;overflow:hidden;transition:.4s;display:flex;flex-direction:column;justify-content:space-between}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--x,50%) var(--y,0),#7c5cff40,transparent 55%);opacity:0;transition:.4s}
+.card:hover{transform:translateY(-6px);border-color:var(--ac)}.card:hover::before{opacity:1}
+.card>*{position:relative}.card p{color:var(--mut);font-size:.95rem;margin-top:10px}
+/* portfolio */
+.pf{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px;margin-top:48px}
+.pj{position:relative;border-radius:22px;padding:22px 22px 0;background:var(--bg2);border:1px solid var(--ln);overflow:hidden}
+.pj .win{transition:transform .6s cubic-bezier(.2,.8,.2,1);margin-bottom:30px}
+.pj:hover .win{transform:scale(1.04) translateY(-6px)}
+.pj .info{padding:6px 0 24px}
+.pj small{color:var(--ac2);font-size:.8rem}
+.pj p{color:var(--mut);font-size:.9rem;margin:6px 0 14px}
+.pj .more{font-weight:700;font-size:.85rem;border-bottom:1px solid var(--ac);padding-bottom:2px}
+@media(hover:hover){.pj .info{transform:translateY(8px);opacity:.75;transition:.5s}.pj:hover .info{transform:none;opacity:1}}
+/* featured */
+.feat{max-width:none;background:linear-gradient(180deg,var(--bg),var(--bg2) 50%,var(--bg));height:240vh;padding:0;position:relative}
+.feat .stick{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden;padding:0 20px}
+.feat .tx{position:absolute;text-align:center;z-index:3;mix-blend-mode:normal;pointer-events:none}
+.feat .tx p{color:var(--mut);margin:14px auto 22px;max-width:36ch;pointer-events:auto}
+.feat .tx .btn{pointer-events:auto}
+.feat .big{width:min(92vw,1100px);transform:scale(var(--s,.55)) rotateX(var(--r,25deg));transition:transform .1s linear;opacity:var(--o,1)}
+.feat .big .win{box-shadow:0 60px 140px #7c5cff55}
+/* before after */
+.ba{position:relative;margin-top:48px;aspect-ratio:16/9;max-height:560px;width:100%;border-radius:22px;overflow:hidden;border:1px solid var(--ln);user-select:none;touch-action:pan-y}
+.ba .a,.ba .b{position:absolute;inset:0;padding:6%}
+.ba .a{background:#cfcab0;color:#222;font-family:"Times New Roman",serif}
+.ba .a h4{font:700 1.4rem "Times New Roman";color:#a00;text-decoration:underline}
+.ba .a div{margin:6px 0;height:10px;background:#8a8566;width:70%}.ba .a div:nth-child(odd){background:#33c;width:40%}
+.ba .b{background:#08080c;clip-path:inset(0 0 0 var(--p,50%))}
+.ba .b h4{font:800 clamp(1.4rem,4vw,3rem) Syne;line-height:1}
+.ba .b div{height:12px;border-radius:6px;background:var(--ln);margin:10px 0;width:60%}.ba .b .bt{display:inline-block;margin-top:14px;padding:10px 22px;border-radius:99px;background:var(--ac);font-weight:700;width:auto;height:auto;font-size:.85rem}
+.ba label{position:absolute;top:14px;padding:6px 14px;border-radius:99px;background:#000b;font-size:.75rem;font-weight:700;z-index:3}
+.ba .hd{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:var(--ac2);z-index:4;transform:translateX(-50%)}
+.ba .hd::after{content:"⇄";position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px;border-radius:50%;background:var(--ac);display:grid;place-items:center;font-size:1.2rem}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
+.ba input:focus-visible+.hd::after{outline:2px solid #fff}
+/* steps */
+.tl{margin-top:50px;display:grid;gap:0;position:relative;padding-left:34px;border-left:2px solid var(--ln)}
+.tl::before{content:"";position:absolute;left:-2px;top:0;width:2px;height:var(--tp,0%);background:var(--ac)}
+.st{padding:0 0 46px;position:relative}.st::before{content:"";position:absolute;left:-42px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--ln);transition:.4s}
+.st.on::before{background:var(--ac);border-color:var(--ac)}
+.st span{color:var(--ac2);font:800 .95rem Syne}.st p{color:var(--mut);max-width:50ch}
+/* why */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:40px}
+.why div{border:1px solid var(--ln);border-radius:14px;padding:16px 20px;display:flex;gap:12px}.why b{color:var(--ac2)}
+blockquote{font:800 clamp(1.6rem,4.2vw,3.4rem)/1.1 Syne;margin-top:60px;max-width:22ch}
+/* process */
+.pr{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.pr div{background:var(--bg2);border:1px solid var(--ln);border-radius:18px;padding:22px;min-height:190px;opacity:.25;transform:scale(.94);transition:.7s}
+.pr.go div{opacity:1;transform:none}.pr.go div:nth-child(2){transition-delay:.4s}.pr.go div:nth-child(3){transition-delay:.8s}.pr.go div:nth-child(4){transition-delay:1.2s}
+.pr small{color:var(--ac2);font-weight:700}
+.pr pre{font:.78rem/1.5 ui-monospace,monospace;color:var(--ac);margin-top:10px;white-space:pre-wrap}
+.sk{height:70px;margin-top:10px;border:2px dashed var(--mut);border-radius:10px}
+.fin{height:70px;margin-top:10px;border-radius:10px;background:linear-gradient(135deg,var(--ac),#12b);position:relative}.fin::after{content:"";position:absolute;left:10px;bottom:10px;width:50%;height:8px;border-radius:4px;background:#fff9}
+@media(max-width:820px){.pr{grid-template-columns:1fr 1fr}}
+/* tech */
+.tech{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.tech span{border:1px solid var(--ln);padding:14px 26px;border-radius:99px;font-weight:700;transition:.3s}.tech span:hover{border-color:var(--ac);color:var(--ac2);transform:translateY(-3px)}
+/* testi */
+.tm{font-size:.8rem;color:var(--mut);margin-top:14px}
+.av{width:46px;height:46px;border-radius:50%;margin-bottom:16px}
+/* prices */
+.pc{min-height:380px}.pc .pr2{font:800 2rem Syne;color:var(--ac2)}.pc.hot{border-color:var(--ac);background:linear-gradient(160deg,color-mix(in srgb,var(--ac) 22%,var(--bg2)),var(--bg2))}
+.pc ul{list-style:none;padding:0;color:var(--mut);font-size:.92rem;display:grid;gap:6px;margin:14px 0}.pc li::before{content:"✓ ";color:var(--ac2)}
+/* final cta + form */
+.fcta{max-width:none;text-align:center;background:radial-gradient(ellipse at 50% 100%,#7c5cff66,transparent 60%),var(--bg);position:relative;overflow:hidden}
+.fcta h2{margin:auto;max-width:14ch;font-size:clamp(2.4rem,8vw,6.5rem)}.fcta .lead{margin:22px auto 34px}.fcta .cta{justify-content:center}
+.fcta .p{animation:pulse 2.6s infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 #7c5cffaa}70%{box-shadow:0 0 0 22px #7c5cff00}100%{box-shadow:0 0 0 0 #7c5cff00}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px;max-width:820px}
+.f{display:grid;gap:6px}.f.w{grid-column:1/-1}
+label.l{font-size:.85rem;color:var(--mut)}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg2);border:1px solid var(--ln);border-radius:12px;padding:14px 16px;min-height:50px;width:100%}
+textarea{min-height:130px;resize:vertical}
+.f.bad input,.f.bad select,.f.bad textarea{border-color:#ff5c7a}.f.ok input,.f.ok select,.f.ok textarea{border-color:#3ddc97}
+.er{color:#ff8a9d;font-size:.8rem;min-height:1em}
+form .btn{grid-column:1/-1;justify-content:center}
+#st{grid-column:1/-1;font-weight:700}
+@media(max-width:640px){form{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--ln);padding:50px clamp(20px,5vw,64px);display:grid;gap:22px;max-width:1280px;margin:auto}
+footer .row{display:flex;flex-wrap:wrap;gap:12px 26px;color:var(--mut);font-size:.9rem}footer a:hover{color:var(--ink)}
+/* ajouts */
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--ac);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;transition:top .2s}.skip:focus{top:12px}
+#ld{position:fixed;inset:0;z-index:150;background:var(--bg);display:grid;place-items:center;transition:opacity .6s,visibility .6s}#ld.off{opacity:0;visibility:hidden}
+#ld span{width:120px;height:3px;background:var(--ln);border-radius:3px;overflow:hidden;position:relative}#ld span::after{content:"";position:absolute;inset:0;background:var(--ac);animation:ld 1s infinite}@keyframes ld{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+#pg{position:fixed;top:0;left:0;right:0;height:3px;background:var(--ac);transform:scaleX(0);transform-origin:0 0;z-index:120}
+nav.sc{border-bottom:1px solid var(--ln)}
+.ib{background:none;border:1px solid var(--ln);color:var(--ink);width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.1rem;transition:.3s}.ib:hover{border-color:var(--ac)}
+#fb,#up{position:fixed;z-index:70;opacity:0;pointer-events:none;transform:translateY(12px);transition:.3s}#fb.on,#up.on{opacity:1;pointer-events:auto;transform:none}
+#fb{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}#up{right:16px;bottom:calc(80px + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;background:var(--bg2);border:1px solid var(--ln);color:var(--ink);cursor:pointer;font-size:1.1rem}
+#ck{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:420px;z-index:90;background:var(--bg2);border:1px solid var(--ln);border-radius:18px;padding:18px;font-size:.88rem;color:var(--mut)}#ck div{display:flex;gap:10px;margin-top:12px}#ck .btn{min-height:40px;padding:0 18px}
+#ts2{position:fixed;left:50%;top:84px;transform:translate(-50%,-20px);background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:99px;font-weight:700;font-size:.88rem;opacity:0;pointer-events:none;transition:.3s;z-index:130}#ts2.on{opacity:1;transform:translate(-50%,0)}
+dialog{background:var(--bg2);color:var(--ink);border:1px solid var(--ln);border-radius:20px;padding:24px;width:min(560px,92vw);margin:12vh auto auto}dialog::backdrop{background:#000a;backdrop-filter:blur(4px)}
+#sr{list-style:none;padding:0;margin-top:14px;display:grid;gap:6px;max-height:50vh;overflow:auto}#sr button{width:100%;text-align:left;background:none;border:1px solid var(--ln);color:var(--ink);border-radius:12px;padding:12px 16px;font:inherit;cursor:pointer}#sr button:hover,#sr button:focus-visible{border-color:var(--ac)}#sr small{display:block;color:var(--mut)}
+.pw{position:relative}.pw button{position:absolute;right:6px;top:6px;width:38px;height:38px;border:0;background:none;color:var(--mut);cursor:pointer;font-size:1.1rem}
+.fq{margin-top:40px;max-width:820px}details{border-bottom:1px solid var(--ln);padding:20px 0}summary{cursor:pointer;font:700 1.15rem Syne;list-style:none;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--ac2);font-size:1.5rem;line-height:1;transition:.3s}details[open] summary::after{transform:rotate(45deg)}details p{color:var(--mut);margin-top:12px;max-width:60ch}
+@media print{nav,#cur,#ld,#pg,#ck,#fb,#up,.glow,.float,.skip,dialog,.fcta,form,.ba,#ts2{display:none!important}body{background:#fff}*{color:#000!important;background:none!important;box-shadow:none!important}.rv,.pr div{opacity:1!important;transform:none!important}.feat{height:auto}.feat .big{display:none}.feat .stick{position:static;height:auto}.feat .tx{position:static}.hero{min-height:0;padding-top:20px}section{padding:20px}}
+/* reveal + cursor */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+.hero h1,.hero p,.hero .cta{animation:up 1.1s cubic-bezier(.2,.8,.2,1) both}.hero p{animation-delay:.15s}.hero .cta{animation-delay:.3s}
+@keyframes up{from{opacity:0;transform:translateY(40px)}}
+#cur{position:fixed;width:14px;height:14px;border-radius:50%;background:var(--ac2);pointer-events:none;z-index:99;mix-blend-mode:difference;transition:width .25s,height .25s;display:none}
+@media(hover:hover) and (pointer:fine){#cur{display:block}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+#ld{animation:ldo .5s 2.2s forwards}@keyframes ldo{to{opacity:0;visibility:hidden}}</style><noscript><style>#ld{display:none}.rv,.pr div{opacity:1;transform:none}.hero h1,.hero p,.hero .cta{animation:none}</style></noscript></head><body>
+<div id="cur" aria-hidden="true"></div><a class="skip" href="#top">Aller au contenu</a><div id="ld" aria-hidden="true"><span></span></div><div id="pg" aria-hidden="true"></div><div id="ts2" role="status" aria-live="polite"></div>
+<nav><a class="logo" href="#top">Bakky<i>.</i></a>
+<button class="burger" aria-label="Menu" aria-expanded="false" id="bg">☰</button>
+<div class="links" id="lk"><button class="ib" id="sb" aria-label="Rechercher sur le site">⌕</button><button class="ib" id="tb" aria-label="Basculer mode sombre ou clair">◐</button><a href="#faq">FAQ</a><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#processus">Processus</a><a href="#tarifs">Tarifs</a><a href="#contact" class="btn p" style="min-height:40px;padding:0 20px;color:#fff">Contact</a></div></nav>
+<main id="top">
+<header class="hero"><div class="glow"></div>
+<div class="float" id="fl" aria-hidden="true"></div>
+<div class="in"><h1>JE CRÉE DES SITES WEB QUI <span class="ac">FONT LA DIFFÉRENCE.</span></h1>
+<p>Des sites modernes, rapides et pensés pour transformer vos visiteurs en clients.</p>
+<div class="cta"><a class="btn p" href="#realisations">DÉCOUVRIR MES PROJETS</a><a class="btn s" href="#contact">PARLONS DE VOTRE PROJET</a></div></div></header>
+
+<section class="trust" aria-label="Atouts"><div><svg viewBox="0 0 24 24"><path d="M3 3h18v14H3zM8 21h8M12 17v4"/></svg><h3>DESIGN</h3><p>Interface moderne et intuitive.</p></div>
+<div><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3>RESPONSIVE</h3><p>Parfait sur mobile, tablette et ordinateur.</p></div>
+<div><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>PERFORMANCE</h3><p>Sites rapides et optimisés.</p></div>
+<div><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg><h3>CONVERSION</h3><p>Pensés pour transformer les visiteurs en clients.</p></div></section>
+
+<section id="services"><h2 class="rv">JE TRANSFORME VOS IDÉES EN EXPÉRIENCES WEB.</h2>
+<p class="lead rv">Votre site web est souvent le premier contact entre votre entreprise et vos clients. Je crée des expériences digitales modernes, professionnelles et adaptées à vos objectifs.</p>
+<div class="grid" id="sv"></div></section>
+
+<section id="realisations"><h2 class="rv">MES RÉALISATIONS</h2>
+<p class="lead rv">Quelques exemples de projets conçus avec une approche moderne du design et de l’expérience utilisateur.</p>
+<div class="pf" id="pf"></div></section>
+
+<div class="feat" id="feat"><div class="stick"><div class="tx"><h2 style="margin:auto;max-width:12ch">PROJET EN VEDETTE</h2><p>Une expérience digitale pensée pour impressionner dès le premier regard.</p><a class="btn p" href="#contact">EXPLORER LE PROJET</a></div><div class="big" id="big" aria-hidden="true"></div></div></div>
+
+<section><h2 class="rv">UN BON DESIGN CHANGE TOUT.</h2>
+<div class="ba" id="ba"><div class="a"><h4>BIENVENUE SUR NOTRE SITE !!!</h4><div></div><div></div><div></div><div></div><div></div></div>
+<div class="b"><h4>Votre activité,<br><span class="ac">enfin à sa hauteur.</span></h4><div></div><div style="width:40%"></div><span class="bt">Démarrer</span></div>
+<label style="left:14px">AVANT</label><label style="right:14px">APRÈS</label>
+<input type="range" min="0" max="100" value="50" id="rg" aria-label="Comparer avant et après"><span class="hd"></span></div>
+<p class="lead" style="display:flex;gap:30px;flex-wrap:wrap"><span><b>AVANT :</b> Site ancien, désorganisé, peu moderne.</span><span><b>APRÈS :</b> Site moderne, élégant, responsive et professionnel.</span></p></section>
+
+<section id="processus"><h2 class="rv">COMMENT SE DÉROULE UN PROJET ?</h2>
+<div class="tl" id="tl"><div class="st"><span>01 — DISCUSSION</span><p>Nous échangeons sur votre activité, vos objectifs et vos besoins.</p></div>
+<div class="st"><span>02 — CONCEPTION</span><p>Je transforme vos idées en une structure et une interface modernes.</p></div>
+<div class="st"><span>03 — DÉVELOPPEMENT</span><p>Le design devient un site web rapide, responsive et fonctionnel.</p></div>
+<div class="st"><span>04 — LIVRAISON</span><p>Votre site est finalisé, testé et prêt à être présenté à vos clients.</p></div></div></section>
+
+<section><h2 class="rv">POURQUOI TRAVAILLER AVEC MOI ?</h2>
+<div class="why rv"><div><b>✓</b>Design moderne</div><div><b>✓</b>Expérience utilisateur soignée</div><div><b>✓</b>Compatible mobile</div><div><b>✓</b>Site rapide</div><div><b>✓</b>Interface personnalisée</div><div><b>✓</b>Communication simple</div><div><b>✓</b>Accompagnement</div><div><b>✓</b>Attention aux détails</div></div>
+<blockquote class="rv">« Je ne crée pas seulement des sites web. Je crée <span class="ac">votre présence digitale.</span> »</blockquote></section>
+
+<section><h2 class="rv">IDÉE → DESIGN → CODE → SITE FINAL</h2>
+<div class="pr" id="pr"><div><small>IDÉE</small><div class="sk"></div></div>
+<div><small>DESIGN</small><div class="win" style="margin-top:10px;aspect-ratio:auto;height:70px"><b></b></div></div>
+<div><small>CODE</small><pre>&lt;section class="hero"&gt;
+  &lt;h1&gt;Votre site&lt;/h1&gt;
+&lt;/section&gt;</pre></div>
+<div><small>SITE FINAL</small><div class="fin"></div></div></div></section>
+
+<section><h2 class="rv">DES TECHNOLOGIES MODERNES POUR DES SITES PERFORMANTS</h2>
+<div class="tech rv"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Tailwind CSS</span></div></section>
+
+<section><h2 class="rv">CE QUE MES CLIENTS POURRAIENT DIRE</h2>
+<p class="lead">Exemples de démonstration : ce ne sont pas de vrais avis.</p>
+<div class="grid" id="ts"></div></section>
+
+<section id="tarifs"><h2 class="rv">DES SOLUTIONS POUR CHAQUE BESOIN</h2>
+<div class="grid">
+<div class="card pc"><div><h3>SITE VITRINE</h3><p>Pour présenter votre activité professionnellement sur Internet.</p><ul><li>Design sur mesure</li><li>Responsive</li><li>Formulaire de contact</li></ul></div><div class="pr2">25 000 FCFA</div></div>
+<div class="card pc hot"><div><h3>SITE E-COMMERCE</h3><p>Pour présenter et vendre vos produits en ligne.</p><ul><li>Catalogue de produits</li><li>Parcours d’achat fluide</li><li>Optimisé pour la conversion</li></ul></div><div class="pr2">70 000 FCFA</div></div>
+<div class="card pc"><div><h3>MAINTENANCE</h3><p>Pour maintenir votre site à jour, sécurisé et performant.</p><ul><li>Mises à jour</li><li>Sécurité</li><li>Suivi des performances</li></ul></div><div class="pr2">15 000 – 30 000 FCFA <small style="font-size:.9rem">/ mois</small></div></div></div></section>
+
+<section id="faq"><h2 class="rv">QUESTIONS FRÉQUENTES</h2><div class="fq">
+<details><summary>Combien de temps faut-il pour créer mon site ?</summary><p>Un site vitrine prend généralement une à deux semaines, une boutique en ligne un peu plus. Le délai exact dépend de vos contenus et de vos retours.</p></details>
+<details><summary>Que dois-je préparer avant de commencer ?</summary><p>Vos textes, votre logo et quelques photos si vous en avez. Sinon, nous les définissons ensemble pendant la discussion.</p></details>
+<details><summary>Pourrai-je modifier mon site après la livraison ?</summary><p>Oui. Vous pouvez me confier les modifications, ou choisir la formule de maintenance pour des mises à jour régulières.</p></details>
+<details><summary>Comment se passe le paiement ?</summary><p>Nous validons le devis ensemble avant de démarrer. Les modalités de paiement sont précisées dans ce devis.</p></details>
+<details><summary>Mon site sera-t-il visible sur mobile ?</summary><p>Oui. Chaque site est conçu pour s’afficher parfaitement sur smartphone, tablette et ordinateur.</p></details></div></section>
+<section class="fcta"><h2>VOTRE PROCHAIN SITE WEB COMMENCE <span class="ac">ICI.</span></h2>
+<p class="lead">Vous avez une idée, un projet ou simplement besoin d’une présence en ligne plus professionnelle ? Parlons-en.</p>
+<div class="cta"><a class="btn p" href="#contact">DÉMARRER MON PROJET</a><a class="btn s" href="https://wa.me/22371779400?text=Bonjour%20Bakky%2C%20j%27ai%20un%20projet%20de%20site%20web." target="_blank" rel="noopener">ME CONTACTER SUR WHATSAPP</a></div></section>
+
+<section id="contact"><h2 class="rv">PARLONS DE VOTRE PROJET.</h2><p class="lead">Réponse sous 24 h. <a class="btn p" href="https://wa.me/22371779400?text=Bonjour%20Bakky%2C%20j%27ai%20un%20projet%20de%20site%20web." target="_blank" rel="noopener" style="min-height:40px;margin-left:8px">Écrire sur WhatsApp</a> <button class="btn s" id="cp" type="button" style="min-height:40px;margin-left:8px">Copier mon email</button></p>
+<form id="fm" novalidate>
+<div class="f"><label class="l" for="n">Nom</label><input id="n" name="n" autocomplete="name" required><span class="er"></span></div>
+<div class="f"><label class="l" for="e">Email</label><input id="e" name="e" type="email" autocomplete="email" required><span class="er"></span></div>
+<div class="f"><label class="l" for="c">Entreprise</label><input id="c" name="c" autocomplete="organization"><span class="er"></span></div>
+<div class="f"><label class="l" for="t">Type de projet</label><select id="t" required><option value="">Choisir…</option><option>Site vitrine</option><option>E-commerce</option><option>Refonte de site</option><option>Landing page</option><option>Autre</option></select><span class="er"></span></div>
+<div class="f w"><label class="l" for="b">Budget</label><input id="b" placeholder="Ex. 50 000 FCFA"><span class="er"></span></div>
+<div class="f w"><label class="l" for="m">Message</label><textarea id="m" required minlength="10"></textarea><span class="er"></span></div>
+<button class="btn p" type="submit">ENVOYER MA DEMANDE</button><p id="st" role="status"></p></form></section>
+</main>
+<footer><div class="logo">Bakky</div><p style="color:var(--mut)">Création de sites web modernes pour entreprises ambitieuses.</p>
+<div class="row"><a href="#top">Accueil</a><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#processus">Processus</a><a href="#top">À propos</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+<div class="row"><button class="btn s" style="min-height:40px" onclick="print()">Version imprimable</button><a href="https://wa.me/22371779400?text=Bonjour%20Bakky%2C%20j%27ai%20un%20projet%20de%20site%20web." target="_blank" rel="noopener">WhatsApp</a><a href="#" id="lgo">Espace client</a><span>Dernière mise à jour : 6 octobre 2026</span></div>
+<p style="color:var(--mut);font-size:.85rem">© 2026 — Tous droits réservés.</p></footer>
+<a id="fb" class="btn p" href="#contact">Me contacter</a><button id="up" aria-label="Retour en haut de page">↑</button>
+<div id="ck" hidden><p>Ce site utilise uniquement des cookies utiles à son fonctionnement et à la mesure d’audience.</p><div><button class="btn p" data-v="1">Accepter</button><button class="btn s" data-v="0">Refuser</button></div></div>
+<dialog id="sd" aria-label="Recherche"><input id="si" type="search" placeholder="Rechercher : services, tarifs, processus…" aria-label="Rechercher"><ul id="sr"></ul><button class="btn s" style="margin-top:14px;min-height:40px" onclick="this.closest('dialog').close()">Fermer</button></dialog>
+<dialog id="lg" aria-label="Espace client"><h3>Espace client</h3><p class="lead" style="margin:6px 0 16px">Suivez l’avancement de votre projet.</p><form id="lf" style="display:grid;grid-template-columns:1fr;margin:0"><div class="f"><label class="l" for="le">Email</label><input id="le" type="email" required autocomplete="email"></div><div class="f"><label class="l" for="lp">Mot de passe</label><div class="pw"><input id="lp" type="password" required autocomplete="current-password"><button type="button" id="eye" aria-label="Afficher le mot de passe" aria-pressed="false">👁</button></div></div><button class="btn p" type="submit">SE CONNECTER</button></form></dialog>
+<script>
+const $=s=>document.querySelector(s),th=[["#7c5cff","#1a1a40","#e8e6ff"],["#e8d9c0","#7a4b2a","#2b1b10"],["#ff6b3d","#6b1d0a","#ffd9b0"],["#0e7c66","#0a2e3a","#a8f0d8"],["#2d6cff","#0b1b4a","#bcd2ff"],["#caa45a","#1e1a12","#f4e8c8"]];
+const mk=(t,ph=1)=>`<div class="win" style="--c1:${t[0]};--c2:${t[1]};--c3:${t[2]}"><b></b><div class="scr"><i class="h"></i><i class="t"></i><div class="r"><i></i><i></i><i></i></div>${ph?'<div class="ph"></div>':''}</div></div>`;
+$('#fl').innerHTML=[0,2,4].map((k,i)=>`<div class="w" data-d="${(i+1)*14}" style="width:${64-i*10}%;left:${i*18}%;top:${i*26}%;transform:rotate(${-4+i*4}deg)">${mk(th[k])}</div>`).join('');
+addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;document.querySelectorAll('.float .w').forEach(w=>w.style.transform=`translate(${x*-w.dataset.d}px,${y*-w.dataset.d}px)`)});
+$('#sv').innerHTML=[["SITE VITRINE","Présentez votre entreprise, vos services, votre expertise et vos coordonnées avec une présence en ligne professionnelle."],["E-COMMERCE","Vendez vos produits en ligne avec une boutique moderne, intuitive et optimisée pour la conversion."],["REFONTE DE SITE","Transformez un site ancien ou peu performant en une expérience moderne et professionnelle."],["DESIGN UI/UX","Des interfaces pensées pour être belles, simples à utiliser et efficaces."],["RESPONSIVE DESIGN","Une expérience parfaite sur smartphone, tablette et ordinateur."],["MAINTENANCE","Gardez votre site sécurisé, à jour et performant."]].map(s=>`<div class="card rv" tabindex="0"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
+document.addEventListener('pointermove',e=>{const c=e.target.closest('.card');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')}});
+$('#pf').innerHTML=[["Maison Atlas","Site premium · Entreprise","Une vitrine sobre et élégante pour une entreprise de conseil."],["Nomade Store","E-commerce · Boutique","Catalogue clair, panier rapide, paiement fluide."],["Ô Fourneau","Restaurant · Gastronomie","Menu interactif et réservation en deux clics."],["Immo Horizon","Immobilier · Agence","Recherche de biens et fiches détaillées."],["Orbitly","Startup · Technologie","Landing page à fort impact pour une application SaaS."],["Cabinet Vernet","Cabinet · Services","Une présence rassurante pour une profession libérale."]].map((p,i)=>`<article class="pj rv">${mk(th[i])}<div class="info"><small>${p[1]}</small><h3>${p[0]}</h3><p>${p[2]}</p><a class="more" href="#contact" aria-label="Voir le projet ${p[0]}">Voir le projet</a></div></article>`).join('');
+$('#big').innerHTML=mk(th[0],0);
+$('#ts').innerHTML=[["Amina","Boutique de mode","Un design superbe et un site livré très vite. La communication a été parfaite du début à la fin."],["Julien","Cabinet de conseil","Professionnel et à l’écoute. Le résultat final dépasse ce que j’imaginais."],["Sofia","Restaurant","Mes clients me parlent du site chaque semaine. Un vrai plus pour mon image."]].map((t,i)=>`<div class="card rv"><div><div class="av" style="background:linear-gradient(135deg,${th[i][0]},${th[i+1][0]})"></div><p>« ${t[2]} »</p></div><div class="tm"><b style="color:var(--ink)">${t[0]}</b> · ${t[1]} · exemple fictif</div></div>`).join('');
+/* reveal + steps + process */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in','go');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv,#pr').forEach(e=>io.observe(e));
+/* scroll effects */
+const feat=$('#feat'),big=$('#big'),tl=$('#tl'),sts=[...document.querySelectorAll('.st')];let tk=0;
+addEventListener('scroll',()=>{if(tk)return;tk=requestAnimationFrame(()=>{tk=0;
+const r=feat.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));
+big.style.setProperty('--s',.55+p*.5);big.style.setProperty('--r',(25-p*25)+'deg');big.style.setProperty('--o',p>.7?1-(p-.7)*1.2:1);
+const t=tl.getBoundingClientRect(),q=Math.min(1,Math.max(0,(innerHeight*.7-t.top)/t.height));tl.style.setProperty('--tp',q*100+'%');
+sts.forEach((s,i)=>s.classList.toggle('on',q>(i+.2)/sts.length))})},{passive:true});
+/* before/after */
+$('#rg').addEventListener('input',e=>$('#ba').style.setProperty('--p',e.target.value+'%'));
+/* menu */
+const bg=$('#bg'),lk=$('#lk');bg.onclick=()=>{const o=lk.classList.toggle('open');bg.setAttribute('aria-expanded',o)};lk.onclick=e=>{if(e.target.tagName=='A'){lk.classList.remove('open');bg.setAttribute('aria-expanded',false)}};
+/* cursor */
+const cu=$('#cur');addEventListener('pointermove',e=>{cu.style.transform=`translate(${e.clientX-7}px,${e.clientY-7}px)`;const h=e.target.closest('a,button,.card,.pj');cu.style.width=cu.style.height=h?'40px':'14px'});
+/* form */
+const fm=$('#fm');
+const chk=el=>{const f=el.closest('.f'),er=f.querySelector('.er');let m='';
+if(el.required&&!el.value.trim())m='Ce champ est requis.';else if(el.type=='email'&&el.value&&!/^\S+@\S+\.\S+$/.test(el.value))m='Entrez un email valide.';else if(el.id=='m'&&el.value.trim().length<10)m='Décrivez votre projet en 10 caractères minimum.';
+er.textContent=m;f.classList.toggle('bad',!!m);f.classList.toggle('ok',!m&&!!el.value);el.setAttribute('aria-invalid',!!m);return!m};
+fm.querySelectorAll('input,select,textarea').forEach(el=>el.addEventListener('blur',()=>chk(el)));
+const MAIL="bakary_tangara@icloud.com",FORM_URL="";
+const toast=m=>{const t=$('#ts2');t.textContent=m;t.classList.add('on');clearTimeout(toast.i);toast.i=setTimeout(()=>t.classList.remove('on'),2800)};
+const utm={},sp=new URLSearchParams(location.search);
+['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{try{const v=sp.get(k)||sessionStorage.getItem(k);if(v){utm[k]=v;sessionStorage.setItem(k,v)}}catch(e){}});
+fm.onsubmit=async e=>{e.preventDefault();const s=$('#st'),els=[...fm.querySelectorAll('input,select,textarea')];
+if(!els.map(chk).every(Boolean)){s.style.color='#ff8a9d';s.textContent='Corrigez les champs en rouge.';fm.querySelector('.bad input,.bad select,.bad textarea')?.focus();return}
+const d={nom:$('#n').value,email:$('#e').value,entreprise:$('#c').value,projet:$('#t').value,budget:$('#b').value,message:$('#m').value,...utm},btn=fm.querySelector('button');
+btn.disabled=true;btn.textContent='ENVOI EN COURS…';
+try{if(FORM_URL){const r=await fetch(FORM_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});if(!r.ok)throw 0}
+else{const b=Object.entries(d).map(([k,v])=>k+' : '+v).join('\n');location.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Nouveau projet : '+d.projet)+'&body='+encodeURIComponent(b)}
+s.style.color='#3ddc97';s.textContent='Merci '+d.nom+' ! Votre demande est prête. Je vous réponds sous 24 h.';toast('Demande envoyée ✓');fm.reset();fm.querySelectorAll('.f').forEach(f=>f.classList.remove('ok'))}
+catch(x){s.style.color='#ff8a9d';s.innerHTML='L’envoi a échoué. <a href="#contact" id="rt" style="text-decoration:underline">Réessayer</a> ou copiez mon email avec le bouton ci-dessus.';$('#rt').onclick=ev=>{ev.preventDefault();fm.requestSubmit()};toast('Échec de l’envoi')}
+btn.disabled=false;btn.textContent='ENVOYER MA DEMANDE'};
+const rt=document.documentElement;try{const t=localStorage.getItem('th');if(t)rt.dataset.theme=t}catch(e){}
+$('#tb').onclick=()=>{const n=rt.dataset.theme=='light'?'dark':'light';rt.dataset.theme=n;try{localStorage.setItem('th',n)}catch(e){}toast(n=='dark'?'Mode sombre activé':'Mode clair activé')};
+const ck=$('#ck');try{if(!localStorage.getItem('ck'))ck.hidden=false}catch(e){ck.hidden=false}
+ck.onclick=e=>{const b=e.target.closest('button');if(!b)return;try{localStorage.setItem('ck',b.dataset.v)}catch(x){}ck.hidden=true;toast('Préférence enregistrée ✓')};
+const nz=t=>t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(),sd=$('#sd'),si=$('#si'),sr=$('#sr');
+const ix=[...document.querySelectorAll('main h2,main h3,main summary')].map(h=>{const b=h.closest('.card,article,details,section')||h;return{h,t:h.textContent.trim(),x:nz(b.textContent)}});
+const rs=()=>{const q=nz(si.value.trim());sr.innerHTML='';if(!q){sr.innerHTML='<li><small style="color:var(--mut)">Tapez un mot pour chercher dans le site.</small></li>';return}
+const m=ix.filter(i=>i.x.includes(q)).slice(0,8);if(!m.length){sr.innerHTML='<li><small style="color:var(--mut)">Aucun résultat. Essayez « tarifs » ou « design ».</small></li>';return}
+m.forEach(i=>{const li=document.createElement('li'),b=document.createElement('button');b.textContent=i.t;b.onclick=()=>{sd.close();i.h.scrollIntoView({behavior:'smooth',block:'center'})};li.append(b);sr.append(li)})};
+$('#sb').onclick=()=>{lk.classList.remove('open');sd.showModal();si.value='';rs();si.focus()};si.oninput=rs;
+$('#cp').onclick=async()=>{try{await navigator.clipboard.writeText(MAIL);toast('Email copié ✓')}catch(e){toast('Copie impossible : '+MAIL)}};
+const lg=$('#lg');$('#lgo').onclick=e=>{e.preventDefault();lg.showModal()};
+$('#eye').onclick=e=>{const p=$('#lp'),sh=p.type=='password';p.type=sh?'text':'password';e.currentTarget.setAttribute('aria-pressed',sh);e.currentTarget.setAttribute('aria-label',sh?'Masquer le mot de passe':'Afficher le mot de passe')};
+$('#lf').onsubmit=e=>{e.preventDefault();lg.close();toast('Espace client bientôt disponible')};
+[sd,lg].forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close()}));
+addEventListener('keydown',e=>{if(e.key=='Escape'){lk.classList.remove('open');bg.setAttribute('aria-expanded',false)}});
+const nv=$('nav'),up=$('#up'),fb=$('#fb'),pg=$('#pg');
+addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?scrollY/h:0)+')';nv.classList.toggle('sc',scrollY>20);up.classList.toggle('on',scrollY>700);fb.classList.toggle('on',scrollY>500)},{passive:true});
+up.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+const hl=()=>$('#ld').classList.add('off');addEventListener('load',()=>setTimeout(hl,400));setTimeout(hl,2500);
+</script></body></html>
